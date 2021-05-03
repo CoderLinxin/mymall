@@ -5,6 +5,7 @@ const Home = () => import( 'views/home/Home');
 const Category = () => import('views/category/Category');
 const Cart = () => import('views/cart/Cart');
 const Profile = () => import('views/profile/Profile');
+const Detail = () => import('views/details/Detail');
 
 const routes = [
   {
@@ -12,21 +13,26 @@ const routes = [
     redirect: '/home'
   },
   {
-    path: '/home',
+    path: '/home',//首页
     component: Home
   },
   {
-    path: '/category',
+    path: '/category',//分类
     component: Category
   },
   {
-    path: '/cart',
+    path: '/cart',//购物车
     component: Cart
   },
   {
-    path: '/profile',
+    path: '/profile',//个人
     component: Profile
+  },
+  {
+    path: '/detail/:iid',//详情页
+    component: Detail
   }
+
 ];
 
 const router = createRouter({
