@@ -124,6 +124,7 @@
         getHomeMultidata().then(result => {//引入的方法
           this.banners = result.data.banner.list;
           this.recommends = result.data.recommend.list;
+          console.log(this.banners);
         })
       },
 
